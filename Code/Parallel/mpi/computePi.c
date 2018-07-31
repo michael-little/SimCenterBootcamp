@@ -18,9 +18,6 @@ int main(int argc, char **argv) {
 
 	double t_start = clock();
 	
-	pi += computePi(procID, numP);
-	printf("PI increment from procedure %d:  ", procID);
-	
 	MPI_Finalize();
 	time = (clock() - t_start) / ((double)CLOCKS_PER_SEC) * 1000;
 	printf("PI = %f, duration: %f ms\n", pi, time);
@@ -29,8 +26,8 @@ int main(int argc, char **argv) {
 double computePi(int procID, int numP) {
 
 	double pi = 0.0; 
-	double dx = 1.0/numsteps * procID/numP + procID * 1.0/numsteps;
-	double x = 0;
+	double dx = 1.0/numsteps;
+	double x = 1.0/numsteps * procID/numP + procID * 1.0/numsteps0;
 	for(int i = 0; i < numsteps; i++) {
 		pi += myFunc(x) * dx;
 		x += dx;
