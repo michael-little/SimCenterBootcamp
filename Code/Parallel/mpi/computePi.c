@@ -18,6 +18,7 @@ int main(int argc, char **argv) {
 	double t_start = clock();
 	
 	pi += computePi(procID, numP);
+	printf("PI increment from procedure %d:  ", procID);
 	
 	MPI_Finalize();
 	time = (clock() - t_start) / ((double)CLOCKS_PER_SEC) * 1000;
