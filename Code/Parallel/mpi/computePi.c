@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#include <mpi.h>
 
 double myFunc(double x);
 double computePi(int procIC, int numP);
