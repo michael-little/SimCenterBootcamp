@@ -18,11 +18,10 @@ int main(int argc, char **argv) {
 	double t_start = clock();
 	
 	pi += computePi(procID, numP);
-
 	
-	printf("PI = %f, duration: %f ms\n", pi, time);
 	MPI_Finalize();
 	time = (clock() - t_start) / ((double)CLOCKS_PER_SEC) * 1000;
+	printf("PI = %f, duration: %f ms\n", pi, time);
 }
 
 double computePi(int procID, int numP) {
