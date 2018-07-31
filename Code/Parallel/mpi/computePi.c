@@ -24,7 +24,7 @@ int main(int argc, char **argv) {
 }
 
 double computePi(int procID, int numP) {
-	static in long numsteps = 100000
+	static int long numsteps = 100000
 	double pi = 0.0; 
 	double dx = 1.0/numsteps;
 	double x = 1.0/numsteps * procID/numP + procID * 1.0/numsteps0;
