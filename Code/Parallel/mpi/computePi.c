@@ -1,39 +1,30 @@
+#include <mpi.h>
 #include <stdio.h>
 #include <time.h>
-#include <mpi.h>
 
 double myFunc(double x);
-double computePi(int N, int procIC, int numP);
 
 static int long numsteps = 100000;
 
-int main(int argc, char **argv) {
-	int procID, numP;
-	double pi = 0.0;
-	double time = 0.0;
+int main(int argc, char**argv) {
 
-	MPI_Init(&argc, &argv);
+	int procID, numP;
+	MPI_Init( &argc, &argv);
 	MPI_Comm_size( MPI_COMM_WORLD, &numP );
 	MPI_Comm_rank( MPI_COMM_WORLD, &procID );
 
-	double t_start = clock();
-	
-	MPI_Finalize();
-	time = (clock() - t_start) / ((double)CLOCKS_PER_SEC) * 1000;
-	printf("PI = %f, duration: %f ms\n", pi, time);
-}
-
-double computePi(int numsteps, int procID, int numP) {
-
-	double pi = 0.0; 
+	double pi = 0; double time = 0;
 	double dx = 1.0/numsteps;
-	double x = 1.0/numsteps * procID/numP + procID * 1.0/numsteps;
-	for(int i = 0; i < numsteps/procID; i++) {
+	double x = procID / numP;
+	double t_start = clock();
+	for(int i = 0; i < numsteps / numP; i++) {
 		pi += myFunc(x) * dx;
 		x += dx;
 	}
-	
-	return pi;
+
+	time = (clock() - t_start) / ((double)CLOCKS_PER_SEC) * 1000;
+	printf("Procedure: %d PI_i = %f, duration: %f ms\n", procID, pi, time);
+	return 0;
 }
 
 
