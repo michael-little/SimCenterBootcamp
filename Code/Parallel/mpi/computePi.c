@@ -27,7 +27,7 @@ double computePi(int procID, int numP) {
 	static int long numsteps = 100000;
 	double pi = 0.0; 
 	double dx = 1.0/numsteps;
-	double x = 1.0/numsteps * procID/numP + procID * 1.0/numsteps0;
+	double x = 1.0/numsteps * procID/numP + procID * 1.0/numsteps;
 	for(int i = 0; i < numsteps; i++) {
 		pi += myFunc(x) * dx;
 		x += dx;
