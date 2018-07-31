@@ -3,7 +3,7 @@
 #include <mpi.h>
 
 double myFunc(double x);
-double computePi(int procIC, int numP);
+double computePi(int N, int procIC, int numP);
 
 static int long numsteps = 100000;
 
@@ -23,12 +23,12 @@ int main(int argc, char **argv) {
 	printf("PI = %f, duration: %f ms\n", pi, time);
 }
 
-double computePi(int procID, int numP) {
-	static int long numsteps = 100000;
+double computePi(int numsteps, int procID, int numP) {
+
 	double pi = 0.0; 
 	double dx = 1.0/numsteps;
 	double x = 1.0/numsteps * procID/numP + procID * 1.0/numsteps;
-	for(int i = 0; i < numsteps; i++) {
+	for(int i = 0; i < numsteps/procID; i++) {
 		pi += myFunc(x) * dx;
 		x += dx;
 	}
