@@ -6,7 +6,22 @@
 void domainPrint(Domain *theDomain) {
   printf("The Nodes:\n");
   domainPrintNodes(theDomain);
+<<<<<<< HEAD
   domainPrintConstraint(theDomain);
+=======
+}
+
+void domainAddNode(Domain *theDomain, int tag, double crd1, double crd2) {
+  Node *theNextNode = (Node *)malloc(sizeof(Node));
+  nodeSetup(theNextNode, tag, crd1, crd2);
+
+  if (theDomain->theNodes != NULL) {
+    theNextNode->next = theDomain->theNodes;
+  } else {
+    theNextNode->next = NULL;
+  }
+  theDomain->theNodes = theNextNode;
+>>>>>>> 08ee35a4a5d009c5d0cdb5ea2729316eb3998956
 }
 
 void domainPrintNodes(Domain *theDomain) {

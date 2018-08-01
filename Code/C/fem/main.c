@@ -4,9 +4,13 @@
 
 int main(int argc, char **argv) {
   Domain theDomain;
+<<<<<<< HEAD
   theDomain.theNodes = 0;
   theDomain.theConstraint = 0;
 
+=======
+  theDomain.theNodes=0;
+>>>>>>> 08ee35a4a5d009c5d0cdb5ea2729316eb3998956
   domainAddNode(&theDomain, 1, 0.0, 0.0);
   domainAddNode(&theDomain, 2, 0.0, 2.0);
   domainAddNode(&theDomain, 3, 1.0, 1.0);
