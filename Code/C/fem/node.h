@@ -2,6 +2,7 @@
 #define _NODE 
 
 #include <stdio.h>
+#include "constraint.h"
 
 typedef struct node {
   int tag;
