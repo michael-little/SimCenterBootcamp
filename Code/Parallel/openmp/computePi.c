@@ -1,28 +1,41 @@
 #include <stdio.h>
 #include <time.h>
+#include <omp.h>
+#include <stdlib.h>
+#define DATA_SIZE 100000
 
-double myFunc(double x);
+int main(int argc, char *argv[]) {
 
-static int long numsteps = 100000;
+double PI = 0;
+double time = 0;
+double t_start = clock();
 
-int main() {
 
-	double pi = 0; double time = 0;
-	double dx = 1.0/numsteps;
+	#pragma omp parallel reduction(+:PI)
+	{
+
+	int tid = omp_get_thread_num();
+	int numT = omp_get_num_threads();	
+
+	double pi = 0; 
+	double dx = 1.0/DATA_SIZE;
 	double x = 0;
-	double t_start = clock();
-	for(int i = 0; i < numsteps; i++) {
-		pi += myFunc(x) * dx;
-		x += dx;
+	
+	#pragma omp for
+		for(int i = tid; i < DATA_SIZE; i+= numT) {
+			pi += ((4.0) / (1 + x*x)) * dx;
+			x += dx;
+		}
+	
+	PI += pi;	
+
+	printf("Process:  %d,  Total Processes:  %d", tid, numT);
+	printf("part of pi = %d", pi);
+	
+
 	}
+time = (clock() - t_start) / ((double)CLOCKS_PER_SEC) * 1000;
+printf("PI = %f, duration: %f ms\n", pi, time);
 
-	time = (clock() - t_start) / ((double)CLOCKS_PER_SEC) * 1000;
-	printf("PI = %f, duration: %f ms\n", pi, time);
 	return 0;
-}
-
-
-double myFunc(double x) {
-	return ((4.0) / (1 + x*x));
-
 }
