@@ -15,8 +15,12 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="8" column="0" colspan="2">
-     <widget class="QLineEdit" name="DOBEdit"/>
+    <item row="1" column="3">
+     <widget class="QLabel" name="LastNameLabel">
+      <property name="text">
+       <string>Last Name</string>
+      </property>
+     </widget>
     </item>
     <item row="4" column="0" colspan="6">
      <widget class="QLineEdit" name="AddressInput"/>
@@ -37,34 +41,10 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="3">
-     <widget class="QLabel" name="LastNameLabel">
+    <item row="5" column="3">
+     <widget class="QLabel" name="StateLabel">
       <property name="text">
-       <string>Last Name</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="3">
-     <widget class="QComboBox" name="StatecomboBox">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="4">
-     <widget class="QLabel" name="ZipLabel">
-      <property name="text">
-       <string>Zip Code</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0" colspan="5">
-     <widget class="QLabel" name="TitleBarLabel">
-      <property name="text">
-       <string>Please Input Your User Information:</string>
+       <string>State</string>
       </property>
      </widget>
     </item>
@@ -75,28 +55,19 @@
       </property>
      </widget>
     </item>
-    <item row="10" column="2">
-     <widget class="QPushButton" name="ConfirmButton">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
+    <item row="0" column="0" colspan="5">
+     <widget class="QLabel" name="TitleBarLabel">
       <property name="text">
-       <string>Submit</string>
+       <string>Please Input Your User Information:</string>
       </property>
      </widget>
     </item>
-    <item row="5" column="3">
-     <widget class="QLabel" name="StateLabel">
+    <item row="5" column="4">
+     <widget class="QLabel" name="ZipLabel">
       <property name="text">
-       <string>State</string>
+       <string>Zip Code</string>
       </property>
      </widget>
-    </item>
-    <item row="2" column="3" colspan="3">
-     <widget class="QLineEdit" name="LastNameEdit"/>
     </item>
     <item row="2" column="0" colspan="3">
      <widget class="QLineEdit" name="FirstNameEdit"/>
@@ -108,15 +79,21 @@
       </property>
      </widget>
     </item>
-    <item row="6" column="4">
-     <widget class="QLineEdit" name="ZipEdit"/>
-    </item>
     <item row="7" column="0">
      <widget class="QLabel" name="DOBLabel">
       <property name="text">
        <string>Date of Birth</string>
       </property>
      </widget>
+    </item>
+    <item row="6" column="4">
+     <widget class="QLineEdit" name="ZipEdit"/>
+    </item>
+    <item row="2" column="3" colspan="3">
+     <widget class="QLineEdit" name="LastNameEdit"/>
+    </item>
+    <item row="8" column="0" colspan="2">
+     <widget class="QLineEdit" name="DOBEdit"/>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="AddressLabe">
@@ -138,6 +115,22 @@
       </property>
      </widget>
     </item>
+    <item row="10" column="1">
+     <widget class="QPushButton" name="SubmitButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Print Address Label</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="3">
+     <widget class="QLineEdit" name="lineEdit"/>
+    </item>
    </layout>
    <zorder>AddressLabe</zorder>
    <zorder>AddressInput</zorder>
@@ -149,14 +142,14 @@
    <zorder>FirstNameLabel</zorder>
    <zorder>FirstNameEdit</zorder>
    <zorder>TitleBarLabel</zorder>
-   <zorder>StatecomboBox</zorder>
    <zorder>ZipEdit</zorder>
    <zorder>ZipLabel</zorder>
    <zorder>LastNameEdit</zorder>
-   <zorder>ConfirmButton</zorder>
    <zorder>CancelButton</zorder>
    <zorder>StateLabel</zorder>
    <zorder>LastNameLabel</zorder>
+   <zorder>SubmitButton</zorder>
+   <zorder>lineEdit</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -164,7 +157,7 @@
      <x>0</x>
      <y>0</y>
      <width>428</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
