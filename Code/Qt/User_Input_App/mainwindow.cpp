@@ -8,7 +8,16 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    //auto generated part that creates the ui
     ui->setupUi(this);
+
+    QStringList theStates = {
+        "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE" , "FL", "GA", "HI", "ID", "IL",
+        "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT",
+        "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI",
+        "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
+    };
+    ui->cbx_state->addItems(theStates);
 }
 
 MainWindow::~MainWindow()
@@ -28,14 +37,15 @@ void MainWindow::on_SubmitButton_clicked()
     mydata.lastName = ui->LastNameEdit->text();
     mydata.address = ui->AddressInput->text();
     mydata.city = ui->CityEdit->text();
-    mydata.state = ui->stateEdit->text();
+    mydata.state = ui->cbx_state->currentText();
     mydata.zip = ui->ZipEdit->text();
     mydata.DOB = ui->DOBEdit->text();
-    QString address =
+    QString PRINT =
             mydata.firstName + " " + mydata.lastName + "\n"
+            + mydata.address + "\n"
             + mydata.city + ", " + mydata.state + " " + mydata.zip + "\n"
-            + mydata.DOB;
-    ui->printBrowser->setText(address);
+            + "DOB:  " + mydata.DOB;
+    ui->printBrowser->setText(PRINT);
 }
 
 

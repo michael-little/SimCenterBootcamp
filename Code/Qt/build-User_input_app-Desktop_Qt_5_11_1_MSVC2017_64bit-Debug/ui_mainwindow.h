@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -44,8 +45,8 @@ public:
     QLabel *AddressLabe;
     QLabel *month_ex;
     QPushButton *SubmitButton;
-    QLineEdit *stateEdit;
     QTextBrowser *printBrowser;
+    QComboBox *cbx_state;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -66,7 +67,7 @@ public:
         AddressInput->setGeometry(QRect(10, 100, 411, 22));
         CityEdit = new QLineEdit(centralWidget);
         CityEdit->setObjectName(QStringLiteral("CityEdit"));
-        CityEdit->setGeometry(QRect(10, 160, 271, 22));
+        CityEdit->setGeometry(QRect(10, 160, 251, 22));
         CancelButton = new QPushButton(centralWidget);
         CancelButton->setObjectName(QStringLiteral("CancelButton"));
         CancelButton->setGeometry(QRect(247, 295, 93, 28));
@@ -89,7 +90,7 @@ public:
         CityLabel->setGeometry(QRect(10, 140, 21, 16));
         StateLabel = new QLabel(centralWidget);
         StateLabel->setObjectName(QStringLiteral("StateLabel"));
-        StateLabel->setGeometry(QRect(300, 140, 30, 16));
+        StateLabel->setGeometry(QRect(270, 140, 30, 16));
         LastNameEdit = new QLineEdit(centralWidget);
         LastNameEdit->setObjectName(QStringLiteral("LastNameEdit"));
         LastNameEdit->setGeometry(QRect(217, 57, 201, 22));
@@ -118,9 +119,6 @@ public:
         SubmitButton->setGeometry(QRect(89, 295, 119, 28));
         sizePolicy.setHeightForWidth(SubmitButton->sizePolicy().hasHeightForWidth());
         SubmitButton->setSizePolicy(sizePolicy);
-        stateEdit = new QLineEdit(centralWidget);
-        stateEdit->setObjectName(QStringLiteral("stateEdit"));
-        stateEdit->setGeometry(QRect(300, 160, 31, 22));
         printBrowser = new QTextBrowser(centralWidget);
         printBrowser->setObjectName(QStringLiteral("printBrowser"));
         printBrowser->setGeometry(QRect(240, 200, 181, 81));
@@ -134,6 +132,48 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Base, brush);
         palette.setBrush(QPalette::Disabled, QPalette::Shadow, brush);
         printBrowser->setPalette(palette);
+        cbx_state = new QComboBox(centralWidget);
+        cbx_state->setObjectName(QStringLiteral("cbx_state"));
+        cbx_state->setGeometry(QRect(270, 160, 61, 22));
+        QPalette palette1;
+        QBrush brush1(QColor(0, 0, 0, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette1.setBrush(QPalette::Active, QPalette::WindowText, brush1);
+        QBrush brush2(QColor(255, 255, 255, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette1.setBrush(QPalette::Active, QPalette::Button, brush2);
+        palette1.setBrush(QPalette::Active, QPalette::Midlight, brush2);
+        palette1.setBrush(QPalette::Active, QPalette::Dark, brush2);
+        palette1.setBrush(QPalette::Active, QPalette::Mid, brush2);
+        palette1.setBrush(QPalette::Active, QPalette::Text, brush1);
+        palette1.setBrush(QPalette::Active, QPalette::ButtonText, brush1);
+        palette1.setBrush(QPalette::Active, QPalette::Base, brush2);
+        palette1.setBrush(QPalette::Active, QPalette::Window, brush2);
+        palette1.setBrush(QPalette::Active, QPalette::Shadow, brush2);
+        palette1.setBrush(QPalette::Active, QPalette::AlternateBase, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::Midlight, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::Dark, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::Mid, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::Text, brush1);
+        palette1.setBrush(QPalette::Inactive, QPalette::ButtonText, brush1);
+        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::Shadow, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Midlight, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Dark, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Mid, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Text, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::ButtonText, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Shadow, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush2);
+        cbx_state->setPalette(palette1);
         MainWindow->setCentralWidget(centralWidget);
         AddressLabe->raise();
         AddressInput->raise();
@@ -152,8 +192,8 @@ public:
         StateLabel->raise();
         LastNameLabel->raise();
         SubmitButton->raise();
-        stateEdit->raise();
         printBrowser->raise();
+        cbx_state->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 428, 26));
@@ -167,8 +207,8 @@ public:
         QWidget::setTabOrder(FirstNameEdit, LastNameEdit);
         QWidget::setTabOrder(LastNameEdit, AddressInput);
         QWidget::setTabOrder(AddressInput, CityEdit);
-        QWidget::setTabOrder(CityEdit, stateEdit);
-        QWidget::setTabOrder(stateEdit, ZipEdit);
+        QWidget::setTabOrder(CityEdit, cbx_state);
+        QWidget::setTabOrder(cbx_state, ZipEdit);
         QWidget::setTabOrder(ZipEdit, DOBEdit);
         QWidget::setTabOrder(DOBEdit, SubmitButton);
         QWidget::setTabOrder(SubmitButton, CancelButton);
