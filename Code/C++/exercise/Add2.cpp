@@ -2,6 +2,7 @@
 #include "Add2.h"
 
 Add2::Add2(double first, double second)
+//the line below simply sets a = first, b = second, c = 0
   :a(first), b(second), c(0) 
 {
   
@@ -9,6 +10,7 @@ Add2::Add2(double first, double second)
 Add2::~Add2() {
 
 }
+
 int 
 Add2::runTask(void) {
   c = a+b;

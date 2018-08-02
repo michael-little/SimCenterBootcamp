@@ -12,6 +12,7 @@ class Program {
   ~Program();
   int addTask(Task *);
   int runTasks(ostream &s);
+
  private:
   queue<Task *>taskQueue;
 };
