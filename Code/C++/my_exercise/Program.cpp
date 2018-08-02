@@ -2,12 +2,21 @@
 #include "Program.h"
 #include "Task.h"
 
+<<<<<<< HEAD:Code/C++/my_exercise/Program.cpp
 Program::Program() 
 {
 }
 
 Program::~Program() 
 {
+=======
+Program::Program() {
+
+}
+
+Program::~Program() {
+
+>>>>>>> pr/6:Code/C++/exercise/Program.cpp
 }
 
 int 
@@ -25,6 +34,6 @@ Program::runTasks(ostream &s)
       theTask->runTask();
       theTask->Print(s);
       taskQueue.pop();
-    }
+  }
   return 0;
 }
