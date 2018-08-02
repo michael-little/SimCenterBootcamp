@@ -13,125 +13,315 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="3">
-     <widget class="QLabel" name="LastNameLabel">
-      <property name="text">
-       <string>Last Name</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0" colspan="6">
-     <widget class="QLineEdit" name="AddressInput"/>
-    </item>
-    <item row="6" column="0" colspan="3">
-     <widget class="QLineEdit" name="CityEdit"/>
-    </item>
-    <item row="10" column="3">
-     <widget class="QPushButton" name="CancelButton">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="text">
-       <string>Cancel</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="3">
-     <widget class="QLabel" name="StateLabel">
-      <property name="text">
-       <string>State</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="CityLabel">
-      <property name="text">
-       <string>City</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0" colspan="5">
-     <widget class="QLabel" name="TitleBarLabel">
-      <property name="text">
-       <string>Please Input Your User Information:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="4">
-     <widget class="QLabel" name="ZipLabel">
-      <property name="text">
-       <string>Zip Code</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0" colspan="3">
-     <widget class="QLineEdit" name="FirstNameEdit"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="FirstNameLabel">
-      <property name="text">
-       <string>First Name</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="0">
-     <widget class="QLabel" name="DOBLabel">
-      <property name="text">
-       <string>Date of Birth</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="4">
-     <widget class="QLineEdit" name="ZipEdit"/>
-    </item>
-    <item row="2" column="3" colspan="3">
-     <widget class="QLineEdit" name="LastNameEdit"/>
-    </item>
-    <item row="8" column="0" colspan="2">
-     <widget class="QLineEdit" name="DOBEdit"/>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="AddressLabe">
-      <property name="text">
-       <string>Address</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="2" colspan="2">
-     <widget class="QLabel" name="month_ex">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="text">
-       <string>(mm/dd/yyyy)</string>
-      </property>
-     </widget>
-    </item>
-    <item row="10" column="1">
-     <widget class="QPushButton" name="SubmitButton">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="text">
-       <string>Print Address Label</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="3">
-     <widget class="QLineEdit" name="lineEdit"/>
-    </item>
-   </layout>
+   <widget class="QLineEdit" name="DOBEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>137</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="AddressInput">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>411</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="CityEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>271</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CancelButton">
+    <property name="geometry">
+     <rect>
+      <x>247</x>
+      <y>295</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LastNameLabel">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>40</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Last Name</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ZipLabel">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>140</y>
+      <width>50</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Zip Code</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TitleBarLabel">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>11</y>
+      <width>205</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Please Input Your User Information:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CityLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>City</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="StateLabel">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>140</y>
+      <width>30</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>State</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LastNameEdit">
+    <property name="geometry">
+     <rect>
+      <x>217</x>
+      <y>57</y>
+      <width>201</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="FirstNameEdit">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>57</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="FirstNameLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>62</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>First Name</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ZipEdit">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>160</y>
+      <width>81</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DOBLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Date of Birth</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AddressLabe">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>86</y>
+      <width>46</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Address</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="month_ex">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>230</y>
+      <width>80</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string>(mm/dd/yyyy)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SubmitButton">
+    <property name="geometry">
+     <rect>
+      <x>89</x>
+      <y>295</y>
+      <width>119</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string>Print Address Label</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="stateEdit">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>160</y>
+      <width>31</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="printBrowser">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>200</y>
+      <width>181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>240</red>
+          <green>240</green>
+          <blue>240</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Shadow">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>240</red>
+          <green>240</green>
+          <blue>240</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>240</red>
+          <green>240</green>
+          <blue>240</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Shadow">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>240</red>
+          <green>240</green>
+          <blue>240</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>240</red>
+          <green>240</green>
+          <blue>240</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Shadow">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>240</red>
+          <green>240</green>
+          <blue>240</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+   </widget>
    <zorder>AddressLabe</zorder>
    <zorder>AddressInput</zorder>
    <zorder>CityLabel</zorder>
@@ -149,7 +339,8 @@
    <zorder>StateLabel</zorder>
    <zorder>LastNameLabel</zorder>
    <zorder>SubmitButton</zorder>
-   <zorder>lineEdit</zorder>
+   <zorder>stateEdit</zorder>
+   <zorder>printBrowser</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -174,9 +365,15 @@
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
   <tabstop>FirstNameEdit</tabstop>
+  <tabstop>LastNameEdit</tabstop>
   <tabstop>AddressInput</tabstop>
   <tabstop>CityEdit</tabstop>
+  <tabstop>stateEdit</tabstop>
+  <tabstop>ZipEdit</tabstop>
   <tabstop>DOBEdit</tabstop>
+  <tabstop>SubmitButton</tabstop>
+  <tabstop>CancelButton</tabstop>
+  <tabstop>printBrowser</tabstop>
  </tabstops>
  <resources/>
  <connections/>

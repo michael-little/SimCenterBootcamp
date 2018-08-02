@@ -3,6 +3,17 @@
 
 #include <QMainWindow>
 
+typedef struct data {
+    QString firstName;
+    QString lastName;
+    QString address;
+    QString city;
+    QString state;
+    QString zip;
+    QString DOB;
+} DATA;
+
+
 namespace Ui {
 class MainWindow;
 }
@@ -17,11 +28,12 @@ public:
 
 private slots:
     void on_SubmitButton_clicked();
-
     void on_CancelButton_clicked();
 
 private:
     Ui::MainWindow *ui;
+    DATA mydata;
 };
+
 
 #endif // MAINWINDOW_H

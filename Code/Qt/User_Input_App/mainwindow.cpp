@@ -18,15 +18,24 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_CancelButton_clicked()
 {
-    qDebug() << "entering on_CancelButton_clicked()";
     this->close();
-    qDebug() << "leaving on_CancelButton_clicked()";
 }
 
 void MainWindow::on_SubmitButton_clicked()
 {
-    qDebug() << "entering on_SubmitButton_clicked()";
-    int a;
-    a = 35;
-    qDebug() << "leaving on_SubmitButton_clicked()";
+    DATA mydata;
+    mydata.firstName = ui->FirstNameEdit->text();
+    mydata.lastName = ui->LastNameEdit->text();
+    mydata.address = ui->AddressInput->text();
+    mydata.city = ui->CityEdit->text();
+    mydata.state = ui->stateEdit->text();
+    mydata.zip = ui->ZipEdit->text();
+    mydata.DOB = ui->DOBEdit->text();
+    QString address =
+            mydata.firstName + " " + mydata.lastName + "\n"
+            + mydata.city + ", " + mydata.state + " " + mydata.zip + "\n"
+            + mydata.DOB;
+    ui->printBrowser->setText(address);
 }
+
+
