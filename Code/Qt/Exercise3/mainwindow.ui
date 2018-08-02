@@ -483,18 +483,18 @@
             <colorrole role="Base">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>233</red>
-               <green>185</green>
-               <blue>110</blue>
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
               </color>
              </brush>
             </colorrole>
             <colorrole role="NoRole">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>233</red>
-               <green>185</green>
-               <blue>110</blue>
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
               </color>
              </brush>
             </colorrole>
@@ -503,18 +503,18 @@
             <colorrole role="Base">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>233</red>
-               <green>185</green>
-               <blue>110</blue>
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
               </color>
              </brush>
             </colorrole>
             <colorrole role="NoRole">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>233</red>
-               <green>185</green>
-               <blue>110</blue>
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
               </color>
              </brush>
             </colorrole>
@@ -532,9 +532,9 @@
             <colorrole role="NoRole">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>233</red>
-               <green>185</green>
-               <blue>110</blue>
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
               </color>
              </brush>
             </colorrole>
@@ -545,7 +545,7 @@
           <enum>QFrame::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Plain</enum>
          </property>
         </widget>
        </item>
@@ -1412,7 +1412,7 @@
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
+             <enum>QFrame::Plain</enum>
             </property>
            </widget>
           </item>
@@ -1837,7 +1837,7 @@
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
+             <enum>QFrame::Plain</enum>
             </property>
            </widget>
           </item>
@@ -2271,7 +2271,7 @@
           <enum>QFrame::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Plain</enum>
          </property>
         </widget>
        </item>
@@ -3141,7 +3141,7 @@
           <enum>QFrame::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Plain</enum>
          </property>
         </widget>
        </item>
@@ -3566,7 +3566,7 @@
           <enum>QFrame::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Plain</enum>
          </property>
         </widget>
        </item>
@@ -3581,7 +3581,7 @@
      <x>0</x>
      <y>0</y>
      <width>817</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
