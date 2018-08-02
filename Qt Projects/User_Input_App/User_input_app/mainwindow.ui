@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>428</width>
+    <height>399</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="8" column="0" colspan="2">
+     <widget class="QLineEdit" name="DOBEdit"/>
+    </item>
+    <item row="4" column="0" colspan="6">
+     <widget class="QLineEdit" name="AddressInput"/>
+    </item>
+    <item row="6" column="0" colspan="3">
+     <widget class="QLineEdit" name="CityEdit"/>
+    </item>
+    <item row="10" column="3">
+     <widget class="QPushButton" name="CancelButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Cancel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QLabel" name="LastNameLabel">
+      <property name="text">
+       <string>Last Name</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="3">
+     <widget class="QComboBox" name="StatecomboBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="4">
+     <widget class="QLabel" name="ZipLabel">
+      <property name="text">
+       <string>Zip Code</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="5">
+     <widget class="QLabel" name="TitleBarLabel">
+      <property name="text">
+       <string>Please Input Your User Information:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="CityLabel">
+      <property name="text">
+       <string>City</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="2">
+     <widget class="QPushButton" name="ConfirmButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Submit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QLabel" name="StateLabel">
+      <property name="text">
+       <string>State</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3" colspan="3">
+     <widget class="QLineEdit" name="LastNameEdit"/>
+    </item>
+    <item row="2" column="0" colspan="3">
+     <widget class="QLineEdit" name="FirstNameEdit"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="FirstNameLabel">
+      <property name="text">
+       <string>First Name</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="4">
+     <widget class="QLineEdit" name="ZipEdit"/>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="DOBLabel">
+      <property name="text">
+       <string>Date of Birth</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="AddressLabe">
+      <property name="text">
+       <string>Address</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="2" colspan="2">
+     <widget class="QLabel" name="month_ex">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>(mm/dd/yyyy)</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+   <zorder>AddressLabe</zorder>
+   <zorder>AddressInput</zorder>
+   <zorder>CityLabel</zorder>
+   <zorder>CityEdit</zorder>
+   <zorder>DOBLabel</zorder>
+   <zorder>DOBEdit</zorder>
+   <zorder>month_ex</zorder>
+   <zorder>FirstNameLabel</zorder>
+   <zorder>FirstNameEdit</zorder>
+   <zorder>TitleBarLabel</zorder>
+   <zorder>StatecomboBox</zorder>
+   <zorder>ZipEdit</zorder>
+   <zorder>ZipLabel</zorder>
+   <zorder>LastNameEdit</zorder>
+   <zorder>ConfirmButton</zorder>
+   <zorder>CancelButton</zorder>
+   <zorder>StateLabel</zorder>
+   <zorder>LastNameLabel</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>428</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>FirstNameEdit</tabstop>
+  <tabstop>AddressInput</tabstop>
+  <tabstop>CityEdit</tabstop>
+  <tabstop>DOBEdit</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
