@@ -28,6 +28,7 @@ pi::runTask(void) {
 	//End Timer
 
 	double time = double(t_end - t_start) / (CLOCKS_PER_SEC) * 1000;
+	
 
   return 0;
 }
