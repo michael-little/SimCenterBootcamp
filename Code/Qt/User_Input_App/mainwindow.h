@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <dialog.h>
 #include <QMainWindow>
 
 typedef struct data {
@@ -26,13 +27,18 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+signals:
+    void sendString(QString);
+
 private slots:
-    void on_SubmitButton_clicked();
     void on_CancelButton_clicked();
+    void on_SubmitButton_clicked();
+
 
 private:
     Ui::MainWindow *ui;
     DATA mydata;
+    Dialog *dialog2;
 };
 
 

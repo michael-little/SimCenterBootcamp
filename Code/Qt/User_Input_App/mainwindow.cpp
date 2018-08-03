@@ -1,8 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
-//This is to include the QDebug package.
-#include <QDebug>
+#include "dialog.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -18,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
         "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
     };
     ui->cbx_state->addItems(theStates);
+
 }
 
 MainWindow::~MainWindow()
@@ -32,7 +31,6 @@ void MainWindow::on_CancelButton_clicked()
 
 void MainWindow::on_SubmitButton_clicked()
 {
-    DATA mydata;
     mydata.firstName = ui->FirstNameEdit->text();
     mydata.lastName = ui->LastNameEdit->text();
     mydata.address = ui->AddressInput->text();
@@ -45,7 +43,13 @@ void MainWindow::on_SubmitButton_clicked()
             + mydata.address + "\n"
             + mydata.city + ", " + mydata.state + " " + mydata.zip + "\n"
             + "DOB:  " + mydata.DOB;
-    ui->printBrowser->setText(PRINT);
+    //ui->printBrowser->setText(PRINT);
+
+    dialog2 = new Dialog(this);
+    connect(this,SIGNAL(sendString(QString)),dialog2,SLOT(showString(QString)));
+    emit sendString(PRINT);
+    dialog2->setModal(true);
+    dialog2->show();
 }
 
 
